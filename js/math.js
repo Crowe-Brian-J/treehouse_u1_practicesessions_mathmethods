@@ -47,4 +47,8 @@ mathPage.push(`<p>${num1} - ${num2} = ${num1 - num2}</p>`)
 //     to the web page. Open the finished.png file in this workspace
 //     to see what the completed output should look like
 
-body.innerHTML = mathPage.map((string) => string).join('')
+if (isNaN(num1) || isNaN(num2)) {
+  body.innerHTML = `<h1>You didn't use two numbers. Please refresh and try again.</h1>`
+} else {
+  body.innerHTML = mathPage.map((string) => string).join('')
+}
